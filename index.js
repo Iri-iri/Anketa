@@ -47,11 +47,24 @@ const gender = confirm("Are you a man?");
 
 let yourGender = gender ? "мужчина" : "женщина";
 
+// let pension = null;
+// if ((gender && (yourAge >= 65)) || (!gender && (yourAge >= 55))) {
+//   pension = "Вы на пенсии";
+// } else {
+//   pension = "Вы пока не на пенсии!";
+// };
+
 let pension = null;
 if ((gender && (yourAge >= 65)) || (!gender && (yourAge >= 55))) {
   pension = "Вы на пенсии";
-} else {
-  pension = "Вы пока не на пенсии!";
+};
+
+if (gender && (yourAge < 65)) {
+  pension = `На вас еще ${65 - yourAge} лет пахать можно!`;
+};
+
+if (!gender && (yourAge < 55)) {
+  pension = `На вас еще ${55 - yourAge} лет пахать можно!`;
 };
 
 alert(`Ваше ФИО: ${yuorSurname + " " + yuorName + " " + yuorMiddleName}
