@@ -45,27 +45,14 @@ while (true) {
 const ageInDays = 365 * yourAge + Math.floor(yourAge / 4);
 const gender = confirm("Are you a man?");
 
-let yourGender = null;
-if (gender) {
-  yourGender = "мужчина";
-} else {
-  yourGender = "женщина";
-}
+let yourGender = gender ? "мужчина" : "женщина";
 
 let pension = null;
-if (gender) {
-  if (yourAge >= 65) {
-    pension = "Вы на пенсии";
-  } else {
-    pension = `На вас еще ${65 - yourAge} лет пахать можно!`;
-  }
+if ((gender && (yourAge >= 65)) || (!gender && (yourAge >= 55))) {
+  pension = "Вы на пенсии";
 } else {
-  if (yourAge >= 55) {
-    pension = "Вы на пенсии";
-  } else {
-    pension = `На вас еще ${55 - yourAge} лет пахать можно!`;
-  }
-}
+  pension = "Вы пока не на пенсии!";
+};
 
 alert(`Ваше ФИО: ${yuorSurname + " " + yuorName + " " + yuorMiddleName}
  Ваш возраст в годах: ${yourAge} 
