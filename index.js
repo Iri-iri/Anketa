@@ -47,13 +47,6 @@ const gender = confirm("Are you a man?");
 
 let yourGender = gender ? "мужчина" : "женщина";
 
-// let pension = null;
-// if ((gender && (yourAge >= 65)) || (!gender && (yourAge >= 55))) {
-//   pension = "Вы на пенсии";
-// } else {
-//   pension = "Вы пока не на пенсии!";
-// };
-
 let pension = null;
 if ((gender && (yourAge >= 65)) || (!gender && (yourAge >= 55))) {
   pension = "Вы на пенсии";
